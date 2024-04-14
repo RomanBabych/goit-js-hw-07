@@ -33,7 +33,7 @@ images.forEach(image => {
   imagesHTML += `<li><img src="${image.url}" alt="${image.alt}"></li>`;
 });
 
-gallery.innerHTML = imagesHTML;
+gallery.insertAdjacentHTML("beforeend", imagesHTML);
 
 
 
