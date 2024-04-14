@@ -27,14 +27,34 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-images.forEach((item) => {
-  const listItem = document.createElement("li");
-  const imageElement = document.createElement("img");
+let imagesHTML = '';
 
-  imageElement.src = item.url;
-  imageElement.alt = item.alt;
+images.forEach(image => {
+  imagesHTML += `<li><img src="${image.url}" alt="${image.alt}"></li>`;
+});
 
-  listItem.appendChild(imageElement);
-  gallery.appendChild(listItem);
-})
+gallery.innerHTML = imagesHTML;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// images.forEach((item) => {
+//   const listItem = document.createElement("li");
+//   const imageElement = document.createElement("img");
+
+//   imageElement.src = item.url;
+//   imageElement.alt = item.alt;
+
+//   listItem.appendChild(imageElement);
+//   gallery.appendChild(listItem);
+// })
 
